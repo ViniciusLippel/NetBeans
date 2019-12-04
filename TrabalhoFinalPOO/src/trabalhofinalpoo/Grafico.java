@@ -5,11 +5,6 @@ public class Grafico {
 	private Matriz matriz;
 	private String[][] grafico;
 	
-	public Grafico(Luz luz, Matriz matriz) {
-		super();
-		this.luz = luz;
-		this.matriz = matriz;
-	}
 
 	public Luz getLuz() {
 		return luz;
