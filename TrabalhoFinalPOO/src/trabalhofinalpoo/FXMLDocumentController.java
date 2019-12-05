@@ -5,15 +5,9 @@
  */
 package trabalhofinalpoo;
 
-import java.awt.Button;
-import java.awt.Label;
-import java.awt.TextField;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -111,8 +105,10 @@ public class FXMLDocumentController implements Initializable {
 		while(repeat){
 			g.andarLuz();
 			mostraMatriz(g.getGrafico());
-			if(g.getLuz().getX() == inicialX && g.getLuz().getY() == inicialY) 
+			if(g.getLuz().getX() == inicialX && g.getLuz().getY() == inicialY){ 
 				repeat = false;
+                                System.exit(0);
+                        }
 			Thread.sleep(100);
 		}
     }
@@ -144,15 +140,16 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void verDados(ActionEvent event){
     	Json json = new Json();
-    	Grafico g = new Grafico();
+//    	Grafico g = new Grafico();
 		Persistencia per = new Persistencia (json);
-		g = per.ler(nomeArquivo.getText());
+		Grafico g = per.ler(nomeArquivo.getText());
 		anguloUp.setText(Integer.toString(g.getLuz().anguloToInt()));
+//              System.out.println(g.getLuz().getX());
 		posXUp.setText(Integer.toString(g.getLuz().getX()));
 		posYUp.setText(Integer.toString(g.getLuz().getY()));
 //		tipoUp.setText(g.getMatriz().);
 		alturaUp.setText(Integer.toString(g.getMatriz().getAltura()));
-		alturaUp.setText(Integer.toString(g.getMatriz().getLargura()));
+		larguraUp.setText(Integer.toString(g.getMatriz().getLargura()));
     }
     
     @FXML
@@ -179,8 +176,10 @@ public class FXMLDocumentController implements Initializable {
 		while(repeat){
 			g.andarLuz();
 			mostraMatriz(g.getGrafico());
-			if(g.getLuz().getX() == inicialX && g.getLuz().getY() == inicialY) 
+			if(g.getLuz().getX() == inicialX && g.getLuz().getY() == inicialY){ 
 				repeat = false;
+                                System.exit(0);
+                        }
 			Thread.sleep(100);
 		}
     }
