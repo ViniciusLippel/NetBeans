@@ -41,7 +41,7 @@ public class FXMLDocumentController implements Initializable {
     private Button geraGraf;
 
     @FXML
-    private ChoiceBox<?> angulo;
+    private TextField angulo;
 
     @FXML
     private TextField posx;
@@ -83,7 +83,14 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void gerarGrafico(ActionEvent event) throws InterruptedException {
         Luz l = new Luz();
-		l.setAngulo(Angulos.A45);
+        if(Integer.parseInt(angulo.getText()) == 135)
+        	l.setAngulo(Angulos.A135);
+        else if(Integer.parseInt(angulo.getText()) == 225)
+        	l.setAngulo(Angulos.A225);
+        else if(Integer.parseInt(angulo.getText()) == 315)
+        	l.setAngulo(Angulos.A315);
+        else
+        	l.setAngulo(Angulos.A45);
 		l.setX(Integer.parseInt(posx.getText()));
 		l.setY(Integer.parseInt(posy.getText()));
 		

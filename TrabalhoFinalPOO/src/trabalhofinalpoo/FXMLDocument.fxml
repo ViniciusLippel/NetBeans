@@ -40,7 +40,7 @@
                                     <Insets />
                                  </TilePane.margin>
                               </Label>
-                              <ChoiceBox fx:id="tipoObj" prefHeight="25.0" prefWidth="188.0">
+                              <ChoiceBox fx:id="tipoObj" accessibleRole="TEXT_FIELD" prefHeight="25.0" prefWidth="188.0">
                                  <TilePane.margin>
                                     <Insets bottom="5.0" />
                                  </TilePane.margin>
@@ -81,28 +81,18 @@
                                  </TilePane.margin>
                               </MenuBar>
                               <Label prefHeight="0.0" prefWidth="191.0" text="Ângulo:" />
-                              <ChoiceBox fx:id="angulo" prefHeight="25.0" prefWidth="188.0">
-                                 <TilePane.margin>
-                                    <Insets bottom="5.0" />
-                                 </TilePane.margin>
-                              </ChoiceBox>
+                              <TextField fx:id="angulo" maxWidth="-Infinity" prefHeight="25.0" prefWidth="193.0" />
                               <Label prefHeight="17.0" prefWidth="186.0" text="Ponto inicial (X):" />
                               <TextField fx:id="posx" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="190.0">
                                  <padding>
                                     <Insets bottom="5.0" />
                                  </padding>
-                                 <TilePane.margin>
-                                    <Insets bottom="5.0" />
-                                 </TilePane.margin>
                               </TextField>
                               <Label prefHeight="17.0" prefWidth="188.0" text="Ponto Inicial (Y):" />
                               <TextField fx:id="posy" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="188.0">
                                  <padding>
                                     <Insets bottom="5.0" />
                                  </padding>
-                                 <TilePane.margin>
-                                    <Insets bottom="5.0" />
-                                 </TilePane.margin>
                               </TextField>
                            </children>
                         </TilePane>
@@ -152,8 +142,8 @@
                                           <Label layoutX="48.0" layoutY="46.0" text="Posição X:" />
                                           <Label layoutX="49.0" layoutY="76.0" style="-fx-background-color: #e3e3e3;" text="Posição Y:" />
                                           <Label fx:id="anguloUp" layoutX="138.0" layoutY="14.0" text="0º" />
-                                          <Label fx:id="posXUp" layoutX="138.0" layoutY="46.0" text="0" />
-                                          <Label fx:id="posYUp" layoutX="138.0" layoutY="76.0" text="0" />
+                                          <Label layoutX="138.0" layoutY="46.0" text="0" />
+                                          <Label layoutX="138.0" layoutY="76.0" text="0" />
                                        </children>
                                     </AnchorPane>
                               </content>
